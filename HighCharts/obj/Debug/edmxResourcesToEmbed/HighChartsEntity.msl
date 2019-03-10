@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WKPIModelStoreContainer" CdmEntityContainer="WKPIEntities">
+    <EntitySetMapping Name="AppraisalAttributes">
+      <EntityTypeMapping TypeName="WKPIModel.AppraisalAttribute">
+        <MappingFragment StoreEntitySet="AppraisalAttributes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StandardScore" ColumnName="StandardScore" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssignKPIDetails">
+      <EntityTypeMapping TypeName="WKPIModel.AssignKPIDetail">
+        <MappingFragment StoreEntitySet="AssignKPIDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AssignKPIId" ColumnName="AssignKPIId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PartialActual" ColumnName="PartialActual" />
+          <ScalarProperty Name="GlobalActual" ColumnName="GlobalActual" />
+          <ScalarProperty Name="ActualDate" ColumnName="ActualDate" />
+          <ScalarProperty Name="ActualDateString" ColumnName="ActualDateString" />
+          <ScalarProperty Name="IsPartialApproved" ColumnName="IsPartialApproved" />
+          <ScalarProperty Name="PartialApprovalComment" ColumnName="PartialApprovalComment" />
+          <ScalarProperty Name="PartialApprovalDate" ColumnName="PartialApprovalDate" />
+          <ScalarProperty Name="PartiallyApprovedBy" ColumnName="PartiallyApprovedBy" />
+          <ScalarProperty Name="IsGlobalApproved" ColumnName="IsGlobalApproved" />
+          <ScalarProperty Name="GlobalApprovalComment" ColumnName="GlobalApprovalComment" />
+          <ScalarProperty Name="GlobalApprovalDate" ColumnName="GlobalApprovalDate" />
+          <ScalarProperty Name="GloballyApprovedBy" ColumnName="GloballyApprovedBy" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssignKPIs">
+      <EntityTypeMapping TypeName="WKPIModel.AssignKPI">
+        <MappingFragment StoreEntitySet="AssignKPIs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KPIId" ColumnName="KPIId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="ScoreCardTypeId" ColumnName="ScoreCardTypeId" />
+          <ScalarProperty Name="ScoreCardName" ColumnName="ScoreCardName" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="KpiOwner" ColumnName="KpiOwner" />
+          <ScalarProperty Name="KpiOwnerEmpId" ColumnName="KpiOwnerEmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttributeTypes">
+      <EntityTypeMapping TypeName="WKPIModel.AttributeType">
+        <MappingFragment StoreEntitySet="AttributeTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaseScores">
+      <EntityTypeMapping TypeName="WKPIModel.BaseScore">
+        <MappingFragment StoreEntitySet="BaseScores">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="WKPIModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OperatingUnit" ColumnName="OperatingUnit" />
+          <ScalarProperty Name="OperatingUnitId" ColumnName="OperatingUnitId" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="SubSection" ColumnName="SubSection" />
+          <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIs">
+      <EntityTypeMapping TypeName="WKPIModel.KPI">
+        <MappingFragment StoreEntitySet="KPIs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ObjectiveId" ColumnName="ObjectiveId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Optimization" ColumnName="Optimization" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIUsers">
+      <EntityTypeMapping TypeName="WKPIModel.KPIUser">
+        <MappingFragment StoreEntitySet="KPIUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objectives">
+      <EntityTypeMapping TypeName="WKPIModel.Objective">
+        <MappingFragment StoreEntitySet="Objectives">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PerspectiveId" ColumnName="PerspectiveId" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permissions">
+      <EntityTypeMapping TypeName="WKPIModel.Permission">
+        <MappingFragment StoreEntitySet="Permissions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsAccessable" ColumnName="IsAccessable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perspectives">
+      <EntityTypeMapping TypeName="WKPIModel.Perspective">
+        <MappingFragment StoreEntitySet="Perspectives">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="WKPIModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScoreCards">
+      <EntityTypeMapping TypeName="WKPIModel.ScoreCard">
+        <MappingFragment StoreEntitySet="ScoreCard">
+          <ScalarProperty Name="ScoreCardId" ColumnName="ScoreCardId" />
+          <ScalarProperty Name="ScoreCardTypeId" ColumnName="ScoreCardTypeId" />
+          <ScalarProperty Name="ScoreCardName" ColumnName="ScoreCardName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScoreCardDetails">
+      <EntityTypeMapping TypeName="WKPIModel.ScoreCardDetail">
+        <MappingFragment StoreEntitySet="ScoreCardDetails">
+          <ScalarProperty Name="ScoreCardDetailsId" ColumnName="ScoreCardDetailsId" />
+          <ScalarProperty Name="ScoreCardId" ColumnName="ScoreCardId" />
+          <ScalarProperty Name="KpiId" ColumnName="KpiId" />
+          <ScalarProperty Name="Optimization" ColumnName="Optimization" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="FrequencyInNumber" ColumnName="FrequencyInNumber" />
+          <ScalarProperty Name="PreviousResult" ColumnName="PreviousResult" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="CurrentResult" ColumnName="CurrentResult" />
+          <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+          <ScalarProperty Name="AchievementInPercent" ColumnName="AchievementInPercent" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="WeightedScore" ColumnName="WeightedScore" />
+          <ScalarProperty Name="KpiOwner" ColumnName="KpiOwner" />
+          <ScalarProperty Name="KpiOwnerEmpId" ColumnName="KpiOwnerEmpId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WKPIModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThreeSixtyAppraisals">
+      <EntityTypeMapping TypeName="WKPIModel.ThreeSixtyAppraisal">
+        <MappingFragment StoreEntitySet="ThreeSixtyAppraisals">
+          <ScalarProperty Name="ThreeSixtyAppraisalId" ColumnName="ThreeSixtyAppraisalId" />
+          <ScalarProperty Name="AttributeTypeId" ColumnName="AttributeTypeId" />
+          <ScalarProperty Name="AppraisalAttributeId" ColumnName="AppraisalAttributeId" />
+          <ScalarProperty Name="BaseScoreId" ColumnName="BaseScoreId" />
+          <ScalarProperty Name="Scored" ColumnName="Scored" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="WKPIModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="SubSection" ColumnName="SubSection" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="IsIncharge" ColumnName="IsIncharge" />
+          <ScalarProperty Name="InchargeEmployeeId" ColumnName="InchargeEmployeeId" />
+          <ScalarProperty Name="InchargeName" ColumnName="InchargeName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

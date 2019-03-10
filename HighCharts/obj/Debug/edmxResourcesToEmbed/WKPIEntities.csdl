@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WKPIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AppraisalAttribute">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StandardScore" Type="Int32" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="AssignKPIDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignKPIId" Type="Int64" />
+    <Property Name="KPIName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Actual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartialActual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GlobalActual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ActualDate" Type="DateTime" Precision="7" />
+    <Property Name="ActualDateString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPartialApproved" Type="Boolean" />
+    <Property Name="PartialApprovalComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PartialApprovalDate" Type="DateTime" Precision="7" />
+    <Property Name="PartiallyApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsGlobalApproved" Type="Boolean" />
+    <Property Name="GlobalApprovalComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GlobalApprovalDate" Type="DateTime" Precision="7" />
+    <Property Name="GloballyApprovedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="AssignKPI">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KPIId" Type="Int64" />
+    <Property Name="KPIName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ScoreCardTypeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ScoreCardName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="KpiOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KpiOwnerEmpId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AttributeType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="BaseScore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DesignationId" Type="Int64" />
+    <Property Name="Education" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Responsibility" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="0" />
+    <Property Name="MobileNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OperatingUnit" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OperatingUnitId" Type="Int64" />
+    <Property Name="Product" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="Department" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Int64" />
+    <Property Name="Section" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SectionId" Type="Int64" />
+    <Property Name="SubSection" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubSectionId" Type="Int64" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="KPI">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ObjectiveId" Type="Int64" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Frequency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Optimization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="KPIUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="Objective">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PerspectiveId" Type="Int64" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Permission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ControllerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IsAccessable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Perspective">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ScoreCard">
+    <Key>
+      <PropertyRef Name="ScoreCardId" />
+    </Key>
+    <Property Name="ScoreCardId" Type="Guid" Nullable="false" />
+    <Property Name="ScoreCardTypeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ScoreCardName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ScoreCardDetails" Relationship="Self.FK_ScoreCardDetails_ScoreCardId" FromRole="ScoreCard" ToRole="ScoreCardDetails" />
+  </EntityType>
+  <EntityType Name="ScoreCardDetail">
+    <Key>
+      <PropertyRef Name="ScoreCardDetailsId" />
+    </Key>
+    <Property Name="ScoreCardDetailsId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ScoreCardId" Type="Guid" Nullable="false" />
+    <Property Name="KpiId" Type="Int64" Nullable="false" />
+    <Property Name="Optimization" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Frequency" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FrequencyInNumber" Type="Int32" Nullable="false" />
+    <Property Name="PreviousResult" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Target" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrentResult" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Achievement" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AchievementInPercent" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Score" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WeightedScore" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="KpiOwner" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KpiOwnerEmpId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <NavigationProperty Name="ScoreCard" Relationship="Self.FK_ScoreCardDetails_ScoreCardId" FromRole="ScoreCardDetails" ToRole="ScoreCard" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ThreeSixtyAppraisal">
+    <Key>
+      <PropertyRef Name="ThreeSixtyAppraisalId" />
+    </Key>
+    <Property Name="ThreeSixtyAppraisalId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttributeTypeId" Type="Int64" Nullable="false" />
+    <Property Name="AppraisalAttributeId" Type="Int64" Nullable="false" />
+    <Property Name="BaseScoreId" Type="Int64" Nullable="false" />
+    <Property Name="Scored" Type="Int32" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" Nullable="false" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubSection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsIncharge" Type="Boolean" Nullable="false" />
+    <Property Name="InchargeEmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InchargeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_ScoreCardDetails_ScoreCardId">
+    <End Role="ScoreCard" Type="Self.ScoreCard" Multiplicity="1" />
+    <End Role="ScoreCardDetails" Type="Self.ScoreCardDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ScoreCard">
+        <PropertyRef Name="ScoreCardId" />
+      </Principal>
+      <Dependent Role="ScoreCardDetails">
+        <PropertyRef Name="ScoreCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WKPIEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppraisalAttributes" EntityType="Self.AppraisalAttribute" />
+    <EntitySet Name="AssignKPIDetails" EntityType="Self.AssignKPIDetail" />
+    <EntitySet Name="AssignKPIs" EntityType="Self.AssignKPI" />
+    <EntitySet Name="AttributeTypes" EntityType="Self.AttributeType" />
+    <EntitySet Name="BaseScores" EntityType="Self.BaseScore" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="KPIs" EntityType="Self.KPI" />
+    <EntitySet Name="KPIUsers" EntityType="Self.KPIUser" />
+    <EntitySet Name="Objectives" EntityType="Self.Objective" />
+    <EntitySet Name="Permissions" EntityType="Self.Permission" />
+    <EntitySet Name="Perspectives" EntityType="Self.Perspective" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="ScoreCards" EntityType="Self.ScoreCard" />
+    <EntitySet Name="ScoreCardDetails" EntityType="Self.ScoreCardDetail" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="ThreeSixtyAppraisals" EntityType="Self.ThreeSixtyAppraisal" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_ScoreCardDetails_ScoreCardId" Association="Self.FK_ScoreCardDetails_ScoreCardId">
+      <End Role="ScoreCard" EntitySet="ScoreCards" />
+      <End Role="ScoreCardDetails" EntitySet="ScoreCardDetails" />
+    </AssociationSet>
+    <EntitySet Name="AssignedKpiLogs" EntityType="WKPIModel.AssignedKpiLog" />
+  </EntityContainer>
+  <EntityType Name="AssignedKpiLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignKpiId" Type="Int64" />
+    <Property Name="CurrentTarget" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MonthName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MonthNumber" Type="Int32" />
+    <Property Name="Year" Type="Int64" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

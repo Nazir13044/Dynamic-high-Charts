@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    #container {
+        min-width: 310px;
+        max-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="~/jquery-1.9.1.min.js"></script>
+
+
+<div id="container">
+    @*<div>
+    <button id="button1" class="btn btn-primary">Create Graph</button>
+       </div>*@
+        </div>
+            <script>
+
+                var today = new Date();
+
+                var d = today.getFullYear();
+
+
+                debugger;
+                $(document).ready(function() {
+                    charts();
+                });
+
+               function charts() {
+
+                    debugger;
+                    $.ajax({
+                        url: "@Url.Action("GetData", "Chart")",
+                    type: 'POST',
+                    data: JSON.stringify({}),
+                    dataType: 'json',
+                    async: false,
+                    contentType: 'application/json',
+                    success: function(result) {
+
+                        debugger;
+
+
+                        //var tar = new Array();
+                        //var act = new Array();
+                        var id = new Array();
+
+                        debugger;
+                        for (var i = 0; i < result.length; i++) {
+                            var tar = new Array();
+                            var act = new Array();
+                            var s = result[i];
+                          
+                            for (var j = 0; j < s.length; j++) {
+                               
+                                tar.push(parseInt(result[i][j].Target));
+                                act.push(parseInt(result[i][j].Actual));
+                                id.push(result[i][j].kpiId);
+
+                                if (result[i][j].kpiId == result[i][j].kpiId) {
+                                    alert(result[i][j].kpiId);
+
+                                }
+                            }
+
+                            createCharts();
+
+                        }
+
+
+
+
+
+
+                        var k = 0;
+
+
+                        function createCharts() {
+
+
+
+                            var re = [
+                    {
+                        name: 'Target',
+                        data: tar
+                    },
+                    {
+                        name: 'Actual',
+                        data: act
+                    }
+                            ];
+
+
+
+
+                            $('#container').append($("<div id='ch-" + k + "'></div>"));
+                            Highcharts.chart('ch-' + k, {
+                                //Highcharts.chart('container', {
+
+                                title: {
+                                    text: 'WKPI'
+                                },
+
+                                subtitle: {
+                                    text: ''
+                                },
+
+                                xAxis: {
+                                    categories: ['Jan ' + d, 'Feb ' + d, 'March ' + d, 'April ' + d, 'May ' + d, 'Jun ' + d, 'July ' + d, 'August ' + d, 'September ' + d, 'October ' + d, 'November ' + d, 'December ' + d],
+                                },
+
+                                yAxis: {
+                                    min: 0,
+                                    max: 500,
+                                    startOnTick: true,
+                                    title: {
+                                        text: 'Numbers'
+                                    }
+                                },
+                                legend: {
+                                    layout: 'vertical',
+                                    align: 'right',
+                                    verticalAlign: 'middle'
+                                },
+
+                                series: re,
+
+                                responsive: {
+                                    rules: [{
+                                        condition: {
+                                            maxWidth: 500
+                                        },
+                                        chartOptions: {
+                                            legend: {
+                                                layout: 'horizontal',
+                                                align: 'center',
+                                                verticalAlign: 'bottom'
+                                            }
+                                        }
+                                    }]
+                                }
+                            });
+
+
+                            k++;
+
+                        };
+
+
+
+                    }
+
+
+                });
+                }
+
+
+
+
+            </script>
+
+
